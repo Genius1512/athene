@@ -1,0 +1,1 @@
+from .beamer import remote
