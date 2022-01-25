@@ -3,6 +3,7 @@ from rich import print
 import beamer
 import timetable as tt
 import getmenu
+import data
 
 
 def main(args):
@@ -18,6 +19,14 @@ def main(args):
 
         elif args[1] == "menu":
             getmenu.get_menu("today")
+
+        elif args[1] == "data":
+            if args[2] == "get":
+                data.get(args[3])
+            elif args[2] == "search":
+                data.search(args[3])
+            else:
+                print(f"[red]Invalid operation '{args[2]}'[/red]")
         
         else:
             print(f"[red]Invalid operation '{args[1]}'[/red]")
