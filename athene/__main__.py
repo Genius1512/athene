@@ -7,6 +7,28 @@ import data
 import uvicorn
 
 
+help = {
+    "data": """Get a user's profile information: athene data get <identifier>
+      Search for a given term: athene data search <term>
+      Launch API on <ip> <port>: athene data api <ip> <port>; defaults: 127.0.0.1 and 8000
+""",
+    "timetable": """Alternative: tt; Get timetable of given class: athene timetable <class>
+""",
+    "menu": """Get todays menu in the canteen: athene menu
+"""
+}
+
+def get_help(operation: str = "all"):
+    if operation == "all":
+        for i in help:
+            print(f"{i}: {help[i]}")
+    else:
+        try:
+            print(f"{operation}: {help[operation]}")
+        except KeyError:
+            print("[red]Invalid operation[/red]")
+
+
 def main(args):
     try:
         if args[1] == "beamer":
@@ -42,6 +64,12 @@ def main(args):
 
             else:
                 print(f"[red]Invalid operation '{args[2]}'[/red]")
+
+        elif args[1] == "help":
+            try:
+                get_help(args[2])
+            except IndexError:
+                get_help()
         
         else:
             print(f"[red]Invalid operation '{args[1]}'[/red]")

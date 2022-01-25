@@ -39,7 +39,3 @@ Still in development, does not work
 ### Get Menu
 
 Run ```athene menu``` to get todays menu in the canteen
-
-## Todo
-
-- Feature "Beamer"
