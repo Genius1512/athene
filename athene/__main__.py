@@ -2,6 +2,7 @@ from sys import argv
 from rich import print
 import beamer
 import timetable as tt
+import getmenu
 
 
 def main(args):
@@ -14,6 +15,9 @@ def main(args):
 
         elif args[1] in ["tt", "timetable"]:
             tt.get_timetable(args[2])
+
+        elif args[1] == "menu":
+            getmenu.get_menu("today")
         
         else:
             print(f"[red]Invalid operation '{args[1]}'[/red]")
