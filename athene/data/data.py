@@ -9,14 +9,9 @@ def get(identifier: str):
     new_data = data["teachers"] if 3 <= len(identifier) <= 4 else data["students"]
 
     if identifier in new_data:
-        print(f"""{identifier}'s profile:
-    Name: {new_data[identifier]['name']}
-    ID: {new_data[identifier]['id']}
-    Hash: {new_data[identifier]['hash']}""")
-    if not 3 <= len(identifier) <= 4:
-        print(f"    Class: {new_data[identifier]['class']}")
-    else:
-        print("[red]Profile not found[/red]")
+        print(f"{identifier}'s profile:")
+        for attribute in new_data[identifier]:
+            print(f"    {attribute}: {new_data[identifier][attribute]}")
 
 
 def search(term: str):

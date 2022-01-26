@@ -2,3 +2,6 @@ requests
 rich
 bs4
 lxml
+Flask
+Flask-Testing
+nose
