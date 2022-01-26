@@ -12,6 +12,7 @@ def get(identifier: str):
         print(f"{identifier}'s profile:")
         for attribute in new_data[identifier]:
             print(f"    {attribute}: {new_data[identifier][attribute]}")
+    print("")
 
 
 def search(term: str):
