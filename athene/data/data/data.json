@@ -1,5 +1,11 @@
 {
     "students": {
+        "max.mustermann": {
+            "name": "Mustermann, Max",
+            "id": "696969",
+            "class": "unknown",
+            "hash": "unknown"
+        },
         "lo\u00efc.andr\u00e9": {
             "name": "Andr\u00e9, Lo\u00efc",
             "id": "4017380",
