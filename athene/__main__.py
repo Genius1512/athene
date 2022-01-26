@@ -4,6 +4,7 @@ import beamer
 import timetable as tt
 import getmenu
 import data
+import uvicorn
 
 
 def main(args):
@@ -23,8 +24,22 @@ def main(args):
         elif args[1] == "data":
             if args[2] == "get":
                 data.get(args[3])
+
             elif args[2] == "search":
                 data.search(args[3])
+
+            elif args[2] == "api":
+                try:
+                    host = args[3]
+                except IndexError:
+                    host = "127.0.0.1"
+                try:
+                    port = int(args[4])
+                except IndexError:
+                    port = 8000
+
+                uvicorn.run("data.api:app", host=host, port=port)
+
             else:
                 print(f"[red]Invalid operation '{args[2]}'[/red]")
         

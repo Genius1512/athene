@@ -5,3 +5,5 @@ lxml
 Flask
 Flask-Testing
 nose
+fastapi
+uvicorn
