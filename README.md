@@ -3,6 +3,12 @@
 Developed by Silvan Schmidt \
 [MIT License](license)
 
+## Requirements
+
+- [Python 3.10](https://www.python.org/downloads/release/python-3100/ "Python 3.10 Install link")
+- [Pip](https://www.liquidweb.com/kb/install-pip-windows/ "Tutorial to download pip")
+- [PIP Requirements](requirements.txt "Requirements")
+
 ## Features
 
 ### Data
@@ -11,7 +17,7 @@ Developed by Silvan Schmidt \
 
 Run ```athene data api <ip> <port>``` to launch an API with all data available. \
 Open your browser at ```<ip>:<port>/data/<identifier>``` to recveive the data you want.
-![API Data](assets\imgs\api_data.png "Example of data set")
+![API Data](assets\imgs\api_data.png "Example of a data set")
 
 #### Get
 
