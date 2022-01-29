@@ -29,5 +29,5 @@ Launch an API containing all known data:
 python athene data api <ip, default "127.0.0.1"> <port, default 8000>
 ```
 
-Then, go to  \<ip\>:\<port\>/data/<identifier>, to receive a profile as JSON-data
-![Data Example](genius1512.github.io/athene/docs/data/api_data.png)
+Then, go to  \<ip\>:\<port\>/data/<identifier>, to receive a profile as JSON-data \
+![Data Example](https://genius1512.github.io/athene/docs/data/api_data.png)
