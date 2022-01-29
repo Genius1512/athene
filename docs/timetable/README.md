@@ -8,4 +8,4 @@ python athene timetable <class name>
 Does not show cancelled/modified lessons!
 
 This data is fetched from the KSL website \
-[KSL Timetables](https://kslzh.ch/index.php?pid=116&amp;l=de)
+[KSL Timetables](https://kslzh.ch/index.php?pid=116&amp;l=de "Timetable view on kslzh.ch")

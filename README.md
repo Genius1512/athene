@@ -4,17 +4,17 @@ Developed by Genius1512
 
 ## Requirements
 
-- [Python 3.10.1](https://www.python.org/downloads/release/python-3101/)
-- [Pip requirements](requirements.txt)
+- [Python 3.10.1](https://www.python.org/downloads/release/python-3101/ "Python 3.10.1 Download site")
+- [Pip requirements](requirements.txt "Requirements for the python app")
 
 ## TODO
 
 - Beamer control
-- CMD script
+- Beamer control docs
 
 ## Links
 
-- [LICENSE](license.txt)
-- [Github Page](https://genius1512.github.io/athene)
-- [Docs](https://genius1512.github.io/athene/docs/)
-- [Files](https:/genius1512.github.io/athene/files)
+- [LICENSE](license.txt "License")
+- [Github Page](https://genius1512.github.io/athene "Github Page")
+- [Docs](https://genius1512.github.io/athene/docs/ "Athene Documentation")
+- [Files](https:/genius1512.github.io/athene/files "Files to download")
