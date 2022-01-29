@@ -39,3 +39,10 @@ Still in development, does not work
 ### Get Menu
 
 Run ```athene menu``` to get todays menu in the canteen
+
+## Download files from site
+
+Powershell:
+```powershell
+Invoke-WebRequest -Uri <url> -OutFile <outfile>
+```
