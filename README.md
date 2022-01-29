@@ -44,5 +44,5 @@ Run ```athene menu``` to get todays menu in the canteen
 
 Powershell:
 ```powershell
-Invoke-WebRequest -Uri <url> -OutFile <outfile>
+Invoke-WebRequest -Uri https://genius1512.github.io/athene/<file> -OutFile <outfile>
 ```
