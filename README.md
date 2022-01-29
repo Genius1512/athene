@@ -17,4 +17,4 @@ Developed by Genius1512
 - [LICENSE](license.txt "License")
 - [Github Page](https://genius1512.github.io/athene "Github Page")
 - [Docs](https://genius1512.github.io/athene/docs/ "Athene Documentation")
-- [Files](https:/genius1512.github.io/athene/files "Files to download")
+- [Files](https://genius1512.github.io/athene/files "Files to download")
