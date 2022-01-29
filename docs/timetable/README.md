@@ -5,7 +5,7 @@ Fetch the timetable of the given class
 python athene timetable <class name>
 ```
 
-Does not show cancelled/modified lessons! \
+Does not show cancelled/modified lessons!
 
-This data is fetched from the KSL website
+This data is fetched from the KSL website \
 [KSL Timetables](https://kslzh.ch/index.php?pid=116&amp;l=de)
