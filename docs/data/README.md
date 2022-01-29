@@ -1,7 +1,5 @@
 # Athene data
 
-![Data](api_data.png)
-
 ## Get
 
 Get a users profile:
