@@ -1,3 +1,6 @@
 # Athene Documentation
 
-- [data](/data)
+- [Beamer](/athene/docs/beamer)
+- [Data](/athene/docs/data)
+- [Menu](/athene/docs/menu)
+- [Timetables](/athene/docs/timetable)
