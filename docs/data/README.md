@@ -24,6 +24,12 @@ Search for a profile containing the given search term:
 python athene data search <term>
 ```
 
+## Data Searcher
+
+You can also use the online tool: [Data Searcher](/athene/datasearcher) \
+Enter a search term, if it is a perfect match, it'll show you the profile, otherwise it will \
+show profiles that contain your search term
+
 ## API
 
 Launch an API containing all known data:

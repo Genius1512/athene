@@ -23,3 +23,4 @@ Developed by Genius1512
 - [LICENSE](license.txt "License")
 - [Docs](https://genius1512.github.io/athene/docs/ "Athene Documentation")
 - [Files](https://genius1512.github.io/athene/files "Files to download")
+- [Data Searcher](https://genius1512.github.io/athene/datasearcher)
