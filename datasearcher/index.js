@@ -13,6 +13,6 @@ function fetchSite(url) {
 }
 
 function search() {
-    var searchTerm = document.getElementById("search-term-input");
-    console.log(fetchSite(searchTerm));
+    var searchTerm = document.getElementById("search-term-input").value;
+    console.log(typeof(fetchSite(searchTerm)));
 }
