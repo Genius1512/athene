@@ -1,3 +1,9 @@
+<style>
+    h1 {
+        font-color: green;
+    }
+</style>
+
 # Athene
 
 Developed by Genius1512
