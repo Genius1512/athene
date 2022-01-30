@@ -1,6 +1,6 @@
 <style>
-    h1 {
-        color: green;
+    body {
+        color: #FF2D2D30;
     }
 </style>
 
