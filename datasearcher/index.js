@@ -1,21 +1,23 @@
 function getJSON(url) {
-    var out = "";
-    fetch(url)
-        .then(function(resp) {
-            return resp.json()
-        })
-        .then(function(data) {
-            out = data;
-        })
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", url)
+    xhr.send()
 
-    return out
+    xhr.onload = function() {
+        if (xhr.status != 200) { // analyze HTTP status of the response
+            alert(`Error ${xhr.status}: ${xhr.statusText}`); // e.g. 404: Not Found
+        } else { // show the result
+            alert(`Done, got ${xhr.response.length} bytes`); // response is the server response
+            console.log(xhr.response)
+        }
+    };
 }
 
 
 function search() {
     var searchTerm = document.getElementById("search-term-input").value;
     var profilePre = document.getElementById("profile-text");
-    var url = "http://genius1512.github.io/athene/files/data.json";
+    var url = "/athene/files/data.json";
 
-    console.log(getJSON(url));
+    console.log(getJSON(searchTerm));
 }
