@@ -13,6 +13,8 @@ Developed by Genius1512
 
 - Beamer control
 - Beamer control docs
+- Launch Database on localhost
+- JSON Data machine independent (request from internet) (currently working on)
 
 ## Links
 
