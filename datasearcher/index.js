@@ -29,10 +29,10 @@ function search() {
     var searchTerm = document.getElementById("search-term-input").value;
 
     var mode;
-    if (3 < searchTerm.length < 4) {
-        mode = "students";
-    } else {
+    if (3 <= searchTerm.length <= 4) {
         mode = "teachers";
+    } else {
+        mode = "students";
     }
 
     var profileText;
