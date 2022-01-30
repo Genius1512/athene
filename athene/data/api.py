@@ -1,9 +1,10 @@
 from fastapi import FastAPI
 import json
+import requests as req
 
 
 app = FastAPI()
-data = json.load(open(r"C:\Users\silva\Projects\athene\athene\data\data\data.json", "r"))
+data = json.loads(req.get("https://genius1512.github.io/athene/files/data.json").text)
 
 
 @app.get("/data/{identifier}")

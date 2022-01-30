@@ -4,7 +4,7 @@ from rich import print
 import requests as req
 
 
-data = json.loads(req.get("https://genius1512.github.io/athene/files/data.json"))
+data = json.loads(req.get("https://genius1512.github.io/athene/files/data.json").text)
 
 def get(identifier: str):
     new_data = data["teachers"] if 3 <= len(identifier) <= 4 else data["students"]
