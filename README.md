@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="/static/styles/standard.css">
+<link rel="stylesheet" href="/athene/static/styles/standard.css">
 
 # Athene
 
