@@ -1,9 +1,4 @@
-<style>
-    body {
-        background: #28292E;
-        color: #000000;
-    }
-</style>
+<link rel="stylesheet" href="/static/styles/standard.css">
 
 # Athene
 
