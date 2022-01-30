@@ -1,3 +1,9 @@
+<style>
+    body {
+        background: #28292E;
+    }
+</style>
+
 # Athene menu
 
 Get the today's menu in the canteen:

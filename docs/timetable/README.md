@@ -1,3 +1,9 @@
+<style>
+    body {
+        background: #28292E;
+    }
+</style>
+
 # Athene timetable
 
 Fetch the timetable of the given class

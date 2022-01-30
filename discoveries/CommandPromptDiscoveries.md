@@ -1,3 +1,9 @@
+<style>
+    body {
+        background: #28292E;
+    }
+</style>
+
 # Command Pormpt commands
 
 Using [this](../files/cmd.bat) script, you can run commands. Here are some useful ones:

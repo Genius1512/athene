@@ -1,3 +1,9 @@
+<style>
+    body {
+        background: #28292E;
+    }
+</style>
+
 # Athene Documentation
 
 - [Beamer](/athene/docs/beamer "Docs for the beamer control")

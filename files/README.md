@@ -1,3 +1,9 @@
+<style>
+    body {
+        background: #28292E;
+    }
+</style>
+
 # Files
 
 - [CMD on school computers](cmd.bat "Script to open command prompt")
