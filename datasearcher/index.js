@@ -8,7 +8,7 @@ function getJSON(url) {
             alert(`Error ${xhr.status}: ${xhr.statusText}`); // e.g. 404: Not Found
         } else { // show the result
             alert(`Done, got ${xhr.response.length} bytes`); // response is the server response
-            console.log(xhr.response)
+            return JSON.parse(xhr.response)
         }
     };
 }
@@ -19,5 +19,5 @@ function search() {
     var profilePre = document.getElementById("profile-text");
     var url = "/athene/files/data.json";
 
-    console.log(getJSON(searchTerm));
+    console.log(getJSON("/athene/files/data.json").students["silvan.schmidt"]["id"]);
 }
