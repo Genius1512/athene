@@ -31,7 +31,22 @@ function search() {
 
     var profileText;
     if (data[mode][searchTerm] === undefined) {
-        profileText = "Profile not found";
+        profileText = "Profile not found\nHere are some profiles containing your search:\n";
+        for (const key in data["students"]) {
+            for (const attribute in data["students"][key]) {
+                if (data["students"][key][attribute].includes(searchTerm)) {
+                    profileText += "    " + key + "\n";
+                }
+            }
+        }
+        for (const key in data["teachers"]) {
+            for (const attribute in data["teachers"][key]) {
+                if (data["teachers"][key][attribute].includes(searchTerm)) {
+                    profileText += "    " + key + "\n";
+                }
+            }
+        }
+
     } else {
         profileText = searchTerm + "'s profile:\n";
     for (const key in data[mode][searchTerm]) {
