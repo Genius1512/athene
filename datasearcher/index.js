@@ -38,12 +38,18 @@ function search() {
                     profileText += "    " + key + "\n";
                 }
             }
+            if (key.includes(searchTerm)) {
+                profileText += "    " + key + "\n";
+            }
         }
         for (const key in data["teachers"]) {
             for (const attribute in data["teachers"][key]) {
                 if (data["teachers"][key][attribute].includes(searchTerm)) {
                     profileText += "    " + key + "\n";
                 }
+            }
+            if (key.includes(searchTerm)) {
+                profileText += "    " + key + "\n";
             }
         }
 
