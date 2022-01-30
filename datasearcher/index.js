@@ -17,19 +17,13 @@ function fetchSite(url) {
     }
 }
 
-function checkForEnter(event) {
-    if (event.KeyCode == 13) {
-        document.getElementById("enter").onclick();
-    }
-}
-
 var data = JSON.parse(fetchSite("/athene/files/data.json"));
 
 function search() {
     var searchTerm = document.getElementById("search-term-input").value;
 
     var mode;
-    if (3 <= searchTerm.length <= 4) {
+    if (3 <= searchTerm.length && searchTerm.length <= 4) {
         mode = "teachers";
     } else {
         mode = "students";
