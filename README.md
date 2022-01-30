@@ -1,6 +1,6 @@
 <style>
     h1 {
-        font-color: green;
+        color: green;
     }
 </style>
 
