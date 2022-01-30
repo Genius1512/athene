@@ -17,6 +17,12 @@ function fetchSite(url) {
     }
 }
 
+function checkForEnter(event) {
+    if (event.KeyCode == 13) {
+        document.getElementById("enter").onclick();
+    }
+}
+
 var data = JSON.parse(fetchSite("/athene/files/data.json"));
 
 function search() {
@@ -29,10 +35,14 @@ function search() {
         mode = "teachers";
     }
 
-    var profileText = searchTerm + "'s profile:\n";
+    var profileText;
+    if (data[mode][searchTerm] === undefined) {
+        profileText = "Profile not found";
+    } else {
+        profileText = searchTerm + "'s profile:\n";
     for (const key in data[mode][searchTerm]) {
-        profileText += "    " + key + ": " + data[mode][searchTerm] + "\n";
+        profileText += "    " + key + ": " + data[mode][searchTerm][key] + "\n";
+    }
     }
     document.getElementById("profile-text").innerHTML = profileText;
-
 }

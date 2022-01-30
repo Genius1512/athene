@@ -6,7 +6,7 @@
     <body>
         <div class="centered">
             <input type="text" id="search-term-input" name="Search term">
-            <button onclick="search()" id="enter">Enter</button>
+            <button onclick="search()" onkeypress="checkForEnter(event)" id="enter">Enter</button>
 
             <pre id="profile-text">
                 No profile loaded
