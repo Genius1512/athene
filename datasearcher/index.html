@@ -4,7 +4,13 @@
         <script src="index.js"></script>
     </head>
     <body>
-        <input type="text" id="search-term-input" name="Search term">
-        <button id="enter">Enter</button>
+        <div class="centered">
+            <input type="text" id="search-term-input" name="Search term">
+            <button onclick="search()" id="enter">Enter</button>
+
+            <pre id="profile-text">
+                No profile loaded
+            </pre>
+        </div>
     </body>
 </html>
