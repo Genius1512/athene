@@ -1,14 +1,20 @@
 function fetchSite(url) {
     var xhr = new XMLHttpRequest();
-    xhr.responseType = "json";
 
-    xhr.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            return xhr.responseText;
+    xhr.open('GET', url, false);
+
+    try {
+        xhr.send();
+        if (xhr.status != 200) {
+            console.error(xhr.status + "/" + xhr.statusText);
+            return null
+        } else {
+            return xhr.response
         }
+    } catch(err) {
+        console.error("Request failed");
+        return "Failed"
     }
-    xhr.open("GET", url);
-    xhr.send();
 }
 
 function search() {
