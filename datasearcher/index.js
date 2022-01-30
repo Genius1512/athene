@@ -1,18 +1,20 @@
 function fetchSite(url) {
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", url);
-    xhr.send();
+    xhr.responseType = "json";
 
-    xhr.onload = function() {
-        if (xhr.status != 200) {
-            console.error("Error " + xhr.status + ": " + xhr.statusText);
-        } else {
-            return xhr.response;
+    xhr.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            return xhr.responseText;
         }
     }
+    xhr.open("GET", url);
+    xhr.send();
 }
 
 function search() {
     var searchTerm = document.getElementById("search-term-input").value;
-    console.log(typeof(fetchSite(searchTerm)));
+
+    var resp = fetchSite(searchTerm);    
+    console.log(typeof(resp));
+    console.log(resp);
 }
