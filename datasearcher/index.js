@@ -19,6 +19,10 @@ function fetchSite(url) {
 
 var data = JSON.parse(fetchSite("/athene/files/data.json"));
 
+function writeToOutput(content) {
+    document.getElementById("profile-text").innerHTML = content;
+}
+
 function search() {
     var searchTerm = document.getElementById("search-term-input").value;
 
@@ -29,5 +33,5 @@ function search() {
         mode = "teachers";
     }
 
-    console.log(data[mode][searchTerm]);
+    writeToOutput(data[mode][searchTerm])
 }
