@@ -19,10 +19,6 @@ function fetchSite(url) {
 
 var data = JSON.parse(fetchSite("/athene/files/data.json"));
 
-function writeToOutput(content) {
-    document.getElementById("profile-text").innerHTML = content;
-}
-
 function search() {
     var searchTerm = document.getElementById("search-term-input").value;
 
@@ -33,5 +29,10 @@ function search() {
         mode = "teachers";
     }
 
-    writeToOutput(data[mode][searchTerm])
+    var profileText = searchTerm + "'s profile:\n";
+    for (const key in data[mode][searchTerm]) {
+        profileText += "    " + key + ": " + data[mode][searchTerm] + "\n";
+    }
+    document.getElementById("profile-text").innerHTML = profileText;
+
 }
