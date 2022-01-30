@@ -1,9 +1,10 @@
 import json
 import os
 from rich import print
+import requests as req
 
 
-data = json.load(open(r"C:\Users\silva\Projects\py-athene\athene\data\data\data.json", "r"))
+data = json.loads(req.get("https://genius1512.github.io/athene/files/data.json"))
 
 def get(identifier: str):
     new_data = data["teachers"] if 3 <= len(identifier) <= 4 else data["students"]

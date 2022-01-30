@@ -3,7 +3,7 @@ import json
 
 
 app = FastAPI()
-data = json.load(open(r"C:\Users\silva\Projects\py-athene\athene\data\data\data.json", "r"))
+data = json.load(open(r"C:\Users\silva\Projects\athene\athene\data\data\data.json", "r"))
 
 
 @app.get("/data/{identifier}")
