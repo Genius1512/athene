@@ -17,10 +17,17 @@ function fetchSite(url) {
     }
 }
 
+var data = JSON.parse(fetchSite("/athene/files/data.json"));
+
 function search() {
     var searchTerm = document.getElementById("search-term-input").value;
 
-    var resp = fetchSite(searchTerm);    
-    console.log(typeof(resp));
-    console.log(resp);
+    var mode;
+    if (3 < searchTerm.length < 4) {
+        mode = "students";
+    } else {
+        mode = "teachers";
+    }
+
+    console.log(data[mode][searchTerm]);
 }
