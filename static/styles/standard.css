@@ -6,3 +6,8 @@ body {
 code {
     color: #28292F;
 }
+
+.highlight {
+    border-radius: 10px;
+    background-color: #838383;
+}
