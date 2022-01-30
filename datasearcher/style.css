@@ -5,4 +5,6 @@
 body {
     -moz-transform: scale(1.6); /* for Firefox, default 1*/
     zoom:160%; /* For Chrome, IE, default 100%*/
+    background: #28292E;
+    color: #ffffff;
 }
