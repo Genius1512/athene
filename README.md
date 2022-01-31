@@ -13,7 +13,6 @@ Developed by Genius1512
 
 - Beamer control
 - Beamer control docs
-- Launch Database on localhost
 
 ## Links
 
