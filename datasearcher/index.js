@@ -17,7 +17,10 @@ function fetchSite(url) {
     }
 }
 
-var data = JSON.parse(fetchSite("/athene/files/data.json"));
+var data;
+fetchSite("/athene/files/data.json", function(content) {
+    data = content;
+})
 
 function search() {
     var searchTerm = document.getElementById("search-term-input").value;
