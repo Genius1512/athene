@@ -1,4 +1,9 @@
 <link rel="stylesheet" href="/athene/static/styles/standard.css">
+<style>
+    code {
+        color: #ffffff;
+    }
+</style>
 
 # Command Pormpt commands
 
