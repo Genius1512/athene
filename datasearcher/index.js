@@ -1,19 +1,15 @@
-function fetchSite(url) {
+function fetchSite(url, output) {
     var xhr = new XMLHttpRequest();
+    xhr.open("GET", url, true);
+    xhr.send();
+    xhr.setRequestHeader("Access-Control-Allow-Origin", true);
 
-    xhr.open('GET', url, true);
-
-    try {
-        xhr.send();
+    xhr.onload = function() {
         if (xhr.status != 200) {
             console.error(xhr.status + "/" + xhr.statusText);
-            return null
         } else {
-            return xhr.response
+            output(xhr.response);
         }
-    } catch(err) {
-        console.error("Request failed");
-        return "Failed"
     }
 }
 
