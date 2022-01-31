@@ -1,22 +1,23 @@
-function fetchSite(url, output) {
+function fetchSite(url) {
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", url, true);
-    xhr.send();
-    xhr.setRequestHeader("Access-Control-Allow-Origin", true);
 
-    xhr.onload = function() {
+    xhr.open('GET', url, false);
+
+    try {
+        xhr.send();
         if (xhr.status != 200) {
             console.error(xhr.status + "/" + xhr.statusText);
+            return null
         } else {
-            output(xhr.response);
+            return xhr.response
         }
+    } catch(err) {
+        console.error("Request failed");
+        return "Failed"
     }
 }
 
-var data;
-fetchSite("/athene/files/data.json", function(content) {
-    data = content;
-})
+var data = fetchSite("/athene/files/data.json");
 
 function search() {
     var searchTerm = document.getElementById("search-term-input").value;
