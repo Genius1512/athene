@@ -24,3 +24,4 @@ Developed by Genius1512
 - [Docs](https://genius1512.github.io/athene/docs/ "Athene Documentation")
 - [Files](https://genius1512.github.io/athene/files "Files to download")
 - [Data Searcher](https://genius1512.github.io/athene/datasearcher)
+- [General Discoveries](https://genius1512.github.io/athene/discoveries)
