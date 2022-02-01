@@ -1,19 +1,21 @@
-function fetchJSON(url) {
-    xhr = new XMLHttpRequest();
-    xhr.open("GET", url, false);
-    try {
-        xhr.send()
-        if (xhr.status != 200) {
-            console.error(xhr.status + "/" + xhr.statusText);
-        } else {
-            return JSON.parse(xhr.response);
-        }
-    } catch(err) {
-        console.error("Request failed");
+async function getJSON(url) {
+    let response = await fetch(url);
+
+    var json;
+    if (response.ok) {
+        json = response.json();
+    } else {
+        console.error("HTTPError: " + response.status);
     }
+
+    return json;
 }
 
-var data = fetchJSON("https://genius1512.github.io/athene/files/data.json");
+var data;
+async function getData() {
+    data = await getJSON("https://genius1512.github.io/athene/files/data.json");
+}
+getData();
 
 function getProfileText(mode, identifier) {
     var text = `${identifier}'s profile:\n`;
