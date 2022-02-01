@@ -6,3 +6,4 @@
 
 - [Command Prompt Discoveries](CommandPromptDiscoveries.md)
 - [School Computers File System](SchoolComputersFileSystem.md)
+- [Mail](Mail.md)
