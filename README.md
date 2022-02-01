@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="/athene/static/styles/standard.css">
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
 # Athene
 
