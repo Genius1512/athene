@@ -1,5 +1,4 @@
 import json
-import os
 from rich import print
 import requests as req
 
