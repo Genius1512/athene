@@ -28,28 +28,30 @@ function getProfileText(mode, identifier) {
 function listProfiles(term) {
     var results = [];
     for (const student in data.students) {
-        if (!(results.includes(student))) {
-            for (const attribute in data.students[student]) {
-                if (data.students[student][attribute].includes(term)) {
-                    results.append(student);
-                }
+        for (const attribute in data.students[student]) {
+            if (data.students[student][attribute].includes(term) && !(results.includes(term))) {
+                results.push(student);
+                break;
             }
-            if (student.includes(term)) {
-                results.append(student);
-            }
+        }
+        if (student.includes(term) && !(results.includes(student))) {
+            results.push(student);
         }
     }
-    for (const teacher in data.students) {
-        if (!(results.includes(teacher))) {
-            for (const attribute in data.students[teacher]) {
-                if (data.students[teacher][attribute].includes(term)) {
-                    results.append(teacher);
-                }
-            }
-            if (teacher.includes(term)) {
-                results.append(teacher);
+    for (const teacher in data.teachers) {
+        for (const attribute in data.students[teacher]) {
+            if (data.students[teacher][attribute].includes(term) && !(results.includes(term))) {
+                results.push(teacher);
+                break;
             }
         }
+        if (teacher.includes(term) && !(results.includes(teacher))) {
+            results.push(teacher);
+        }
+    }
+    var text = "Search results for '" + term + "':\n"
+    for (let entry in results) {
+        text += results[entry] + "\n"
     }
     return text;
 }
