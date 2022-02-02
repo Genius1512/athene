@@ -6,6 +6,7 @@ import requests
 def print(arg):
     rprint("[Beamer]: " + str(arg))
 
+
 # parse identifiers to keys
 def parse_key(key: str):
     try:
@@ -15,16 +16,16 @@ def parse_key(key: str):
             "freeze": "47",
             "voldown": "57",
             "volup": "56",
-
             "srcpc": "43",
             "srcvid": "46",
             "srcsvid": "45",
             "srclan": "8A",
             "srcbnc": "40",
-            "srchdmi": "1D"
+            "srchdmi": "1D",
         }[key]
     except KeyError:
         return None
+
 
 # run request to perform control
 def remote(args):
@@ -34,7 +35,15 @@ def remote(args):
         print("Invalid key")
         return
     url = f"http://{ip}:80/cgi-bin/webconf.dll?KEY={key}"
-    headers = {"Upgrade-Insecure-Requests": "1", "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36", "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9", "Referer": f"http://{ip}/cgi-bin/webconf.dll?page=13", "Accept-Encoding": "gzip, deflate", "Accept-Language": "en-US,en;q=0.9", "Connection": "close"}
+    headers = {
+        "Upgrade-Insecure-Requests": "1",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+        "Referer": f"http://{ip}/cgi-bin/webconf.dll?page=13",
+        "Accept-Encoding": "gzip, deflate",
+        "Accept-Language": "en-US,en;q=0.9",
+        "Connection": "close",
+    }
 
     try:
         resp = requests.get(url, headers)

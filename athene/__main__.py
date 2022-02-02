@@ -17,7 +17,7 @@ help = {
     "timetable": """Alternative: tt; Get timetable of given class: athene timetable <class>
 """,
     "menu": """Get todays menu in the canteen: athene menu
-"""
+""",
 }
 
 
@@ -31,16 +31,13 @@ def get_help(operation: str = "all"):
             print(f"{operation}: {help[operation]}")
         except KeyError:
             print("[red]Invalid operation[/red]")
-            
-            
+
+
 # Entry Point
 def main(args):
     try:
         if args[1] == "beamer":
-            beamer.remote([
-                "192.168.20.141",
-                "close"
-            ])
+            beamer.remote(["192.168.20.141", "close"])
 
         elif args[1] in ["tt", "timetable"]:
             tt.get_timetable(args[2])
@@ -75,15 +72,15 @@ def main(args):
                 get_help(args[2])
             except IndexError:
                 get_help()
-        
+
         else:
             print(f"[red]Invalid operation '{args[1]}'[/red]")
-        
+
     except IndexError:
-        print("[red][Main]: Not enough arguments[/red]") # any command has not enough arguments to perform its operation
-        
-        
+        print(
+            "[red][Main]: Not enough arguments[/red]"
+        )  # any command has not enough arguments to perform its operation
+
+
 if __name__ == "__main__":
-    main(
-        argv
-    )
+    main(argv)

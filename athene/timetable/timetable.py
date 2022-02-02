@@ -17,7 +17,7 @@ def get_timetable(cl):
         if not "Montag" in str(row):
             time = row.findAll("th")[0].getText().split("–")[0]
             times.append(time)
-    times = [" "*9, " "*9] + times
+    times = [" " * 9, " " * 9] + times
 
     timetable = []
     for row in rows:
@@ -28,7 +28,13 @@ def get_timetable(cl):
         timetable.append(foo)
 
     string = ""
-    for day in ["[cyan]Montag[/cyan]", "[cyan]Dienstag[/cyan]", "[cyan]Mittwoch[/cyan]", "[cyan]Donnerstag[/cyan]", "[cyan]Freitag[/cyan]"]:
+    for day in [
+        "[cyan]Montag[/cyan]",
+        "[cyan]Dienstag[/cyan]",
+        "[cyan]Mittwoch[/cyan]",
+        "[cyan]Donnerstag[/cyan]",
+        "[cyan]Freitag[/cyan]",
+    ]:
         while len(day) <= 29:
             day += " "
         string += day
@@ -38,18 +44,17 @@ def get_timetable(cl):
         for column in row:
             while len(column) <= 16:
                 column += " "
-            string += f'[blue]{column}[/blue]'
+            string += f"[blue]{column}[/blue]"
         string += "\n"
 
     string = string.split("\n")
 
     for s in range(len(string)):
         try:
-            print(f'{times[s]}  {string[s]}')
+            print(f"{times[s]}  {string[s]}")
         except IndexError:
             pass
 
 
 if __name__ == "__main__":
     get_timetable("W3a")
-
