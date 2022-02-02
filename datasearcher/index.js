@@ -26,25 +26,29 @@ function getProfileText(mode, identifier) {
 }
 
 function listProfiles(term) {
-    var text = "Search results:\n";
+    var results = [];
     for (const student in data.students) {
-        for (const attribute in data.students[student]) {
-            if (data.students[student][attribute].includes(term)) {
-                text += student + "\n";
+        if (!(results.includes(student))) {
+            for (const attribute in data.students[student]) {
+                if (data.students[student][attribute].includes(term)) {
+                    results.append(student);
+                }
             }
-        }
-        if (student.includes(term)) {
-            text += student + "\n";
+            if (student.includes(term)) {
+                results.append(student);
+            }
         }
     }
-    for (const teacher in data.teachers) {
-        for (const attribute in data.teachers[teacher]) {
-            if (data.teachers[teacher][attribute].includes(term)) {
-                text += teacher + "\n";
+    for (const teacher in data.students) {
+        if (!(results.includes(teacher))) {
+            for (const attribute in data.students[teacher]) {
+                if (data.students[teacher][attribute].includes(term)) {
+                    results.append(teacher);
+                }
             }
-        }
-        if (teacher.includes(term)) {
-            text += teacher + "\n";
+            if (teacher.includes(term)) {
+                results.append(teacher);
+            }
         }
     }
     return text;
