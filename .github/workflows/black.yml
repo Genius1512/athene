@@ -30,4 +30,10 @@ jobs:
       - name: Run black
         run: |
           black $(git ls-files '*.py')
+          
+      - name: Commit changes
+        run: |
+          git add --all
+          git commit -m "Black Formatted"
+          git push --all
 
