@@ -6,6 +6,8 @@ import timetable as tt
 import getmenu
 import data
 import uvicorn
+
+
 # dict for help texts
 help = {
     "data": """Get a user's profile information: athene data get <identifier>
@@ -17,6 +19,8 @@ help = {
     "menu": """Get todays menu in the canteen: athene menu
 """
 }
+
+
 # function to get help page
 def get_help(operation: str = "all"):
     if operation == "all":
@@ -27,6 +31,8 @@ def get_help(operation: str = "all"):
             print(f"{operation}: {help[operation]}")
         except KeyError:
             print("[red]Invalid operation[/red]")
+            
+            
 # Entry Point
 def main(args):
     try:
@@ -75,6 +81,8 @@ def main(args):
         
     except IndexError:
         print("[red][Main]: Not enough arguments[/red]") # any command has not enough arguments to perform its operation
+        
+        
 if __name__ == "__main__":
     main(
         argv
