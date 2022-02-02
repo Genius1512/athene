@@ -33,6 +33,8 @@ jobs:
           
       - name: Commit changes
         run: |
+          git config --global user.email "silvan.genius@gmail.com"
+          git config --global user.name "Genius1512"
           git add --all
           git commit -m "Black Formatted"
           git push --all
