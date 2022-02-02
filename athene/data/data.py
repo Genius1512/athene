@@ -1,10 +1,7 @@
 import json
 import os
 from rich import print
-import requests as req
-
-# load data
-data = json.loads(req.get("https://genius1512.github.io/athene/files/data.json").text)
+import requests as req; data = json.loads(req.get("https://genius1512.github.io/athene/files/data.json").text)
 # when getting profile
 def get(identifier: str):
     new_data = (
