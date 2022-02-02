@@ -2,11 +2,11 @@ from fastapi import FastAPI
 import json
 import requests as req
 
-
+# create api
 app = FastAPI()
 data = json.loads(req.get("https://genius1512.github.io/athene/files/data.json").text)
 
-
+# handle get request
 @app.get("/data/{identifier}")
 def get_profile(identifier: str):
     try:

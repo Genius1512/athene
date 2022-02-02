@@ -6,7 +6,7 @@ import requests
 def print(arg):
     rprint("[Beamer]: " + str(arg))
 
-
+# parse identifiers to keys
 def parse_key(key: str):
     try:
         return {
@@ -26,7 +26,7 @@ def parse_key(key: str):
     except KeyError:
         return None
 
-
+# run request to perform control
 def remote(args):
     ip = args[0]
     key = parse_key(args[1])

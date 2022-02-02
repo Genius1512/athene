@@ -1,3 +1,4 @@
+# imports
 from sys import argv
 from rich import print
 import beamer
@@ -6,7 +7,7 @@ import getmenu
 import data
 import uvicorn
 
-
+# dict for help texts
 help = {
     "data": """Get a user's profile information: athene data get <identifier>
       Search for a given term: athene data search <term>
@@ -17,7 +18,7 @@ help = {
     "menu": """Get todays menu in the canteen: athene menu
 """
 }
-
+# function to get help page
 def get_help(operation: str = "all"):
     if operation == "all":
         for i in help:
@@ -28,7 +29,7 @@ def get_help(operation: str = "all"):
         except KeyError:
             print("[red]Invalid operation[/red]")
 
-
+# Entry Point
 def main(args):
     try:
         if args[1] == "beamer":
@@ -75,7 +76,7 @@ def main(args):
             print(f"[red]Invalid operation '{args[1]}'[/red]")
         
     except IndexError:
-        print("[red][Main]: Not enough arguments[/red]")
+        print("[red][Main]: Not enough arguments[/red]") # any command has not enough arguments to perform its operation
 
 
 if __name__ == "__main__":

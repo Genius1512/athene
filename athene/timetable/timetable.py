@@ -4,6 +4,7 @@ from rich import print
 
 
 def get_timetable(cl):
+    # get data
     resp = req.get(f"https://kslzh.ch/index.php?pid=116&t={cl}")
 
     soup = BeautifulSoup(resp.text, features="lxml")
