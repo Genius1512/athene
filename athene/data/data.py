@@ -1,4 +1,5 @@
 import json
+import os
 from rich import print
 import requests as req
 
@@ -12,15 +13,6 @@ def get(identifier: str):
         print(f"{identifier}'s profile:")
         for attribute in new_data[identifier]:
             print(f"    {attribute}: {new_data[identifier][attribute]}")
-
-
-
-
-
-
-
-
-            
 
 
 def search(term: str):
