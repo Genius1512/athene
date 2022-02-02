@@ -15,6 +15,15 @@ def get(identifier: str):
             print(f"    {attribute}: {new_data[identifier][attribute]}")
 
 
+
+
+
+
+
+
+            
+
+
 def search(term: str):
     # search through teachers
     for key in data["teachers"]:
