@@ -11,8 +11,7 @@ searchInput.addEventListener("input", e => {
             profile.name.toLowerCase().includes(value) ||
             profile.id.toLowerCase().includes(value) ||
             profile.class.toLowerCase().includes(value) ||
-            profile.hash.toLowerCase().includes(value) ||
-            profile.identifier.toLowerCase().includes(value)
+            profile.hash.toLowerCase().includes(value)
         profile.element.classList.toggle("hide", !isVisible)
     })
 })
@@ -32,7 +31,6 @@ fetch("https://genius1512.github.io/athene/files/data.json")
                 if (newData[0].class == undefined) {
                     newData[0].class = "None"
                 }
-                newData[0].identifier = profile
             } catch (TypeError) {
             }
         }
