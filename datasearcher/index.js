@@ -4,6 +4,13 @@ const searchInput = document.querySelector("[data-search]");
 
 let profiles = [];
 
+function login(profile) {
+    window.open(`https://intranet.tam.ch/ksl/rest/ics/type/timetable/date/1642582786/auth/${profile.hash}/calendar.ics`)
+    if (confirm("A file is being downloaded. When done, press ok'")) {
+        window.open("https://intranet.tam.ch")
+    }
+}
+
 searchInput.addEventListener("input", e => {
     const value = e.target.value.toLowerCase();
     var notShowing = 0;
@@ -56,6 +63,16 @@ fetch("https://genius1512.github.io/athene/files/data.json")
 ID: ${profile.id}
 Class: ${profile.class}
 Hash: ${profile.hash}`
+
+            if (!(profile.hash == "unknown")) {
+                var loginButton = document.createElement("button");
+                loginButton.id = "login-button";
+                loginButton.className = "button";
+                loginButton.innerHTML = "Login";
+                loginButton.onclick = function() { login(profile) }
+                card.appendChild(loginButton);
+            }
+
             userCardContainer.append(card)
             return {
                 name: profile.name,
@@ -67,7 +84,6 @@ Hash: ${profile.hash}`
             }
         })
     })
-
 
 function showTimetable(profile) {
     profile = profile.parentElement.children[0].innerHTML;

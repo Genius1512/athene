@@ -48,7 +48,7 @@ input {
 	scrollbar-width: thin;
 }
 
-#show-timetable {
+.button {
   height: 30px;
   width: 200px;
   font-size: 1.2rem;
@@ -58,7 +58,7 @@ input {
   border-radius: 10px;
 }
 
-#show-timetable:hover {
+.button:hover {
   background-color: #28292E;
   border-color: black;
 }

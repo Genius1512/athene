@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="colors.css">
-  <script src="index.js" defer></script>
   <title>KSL Datasearcher</title>
 </head>
 <body>
@@ -18,9 +17,10 @@
     <div class="card">
       <div class="header" data-header></div>
       <pre class="body" data-body></pre>
-      <button id="show-timetable" onclick="showTimetable(this);">See timetable</button>
+      <button class="button" onclick="showTimetable(this);">See timetable</button>
     </div>
   </template>
   <div class="info-text" id="info-text">No profiles found</div>
+  <script src="index.js" defer></script>
 </body>
 </html>
