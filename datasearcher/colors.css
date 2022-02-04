@@ -1,48 +1,93 @@
+
+
 body {
-    background-color: rgb(54, 54, 54);
+	background-color: rgb(54, 54, 54);
 }
 
 .card {
-    border: 1px solid black;
-    border-radius: 5px;
-    background-color: #28292E;
-    color: #3794ff;
-    text-align: center;
+	border: 1px solid black;
+	border-radius: 5px;
+	background-color: #28292E;
+	color: #3794ff;
+	text-align: center;
 }
 
 .body {
-    color: #72b0f7;
+	color: #72b0f7;
 }
 
 label {
-    color: #1c82f7;
-    font-size: 2rem;
+	color: #1c82f7;
+	font-size: 2rem;
 }
 
 ::-webkit-input-placeholder {
-    text-align: center;
- }
- 
+	text-align: center;
+}
+
  :-moz-placeholder {
-    text-align: center;  
- }
- 
+	text-align: center;
+}
+
  ::-moz-placeholder {
-    text-align: center;  
- }
+	text-align: center;
+}
 
 input {
-    background-color: #28292E;
-    color: #3794ff;
+	background-color: #28292E;
+	color: #3794ff;
 }
 
 .search-wrapper {
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-    text-align: center;
-  }
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+}
 
 .info-text {
-    color: #72b0f7;
+	color: #72b0f7;
 }
+
+input {
+	font-size: 3rem;
+	height: 50px;
+	width: calc(100% / 2)
+}
+
+.user-cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+	gap: .25rem;
+	margin-top: 1rem;
+}
+
+.card {
+	padding: .5rem;
+}
+
+.card>.header {
+	margin-bottom: .25rem;
+}
+
+.card>.body {
+	font-size: .8rem;
+	overflow: hidden;
+}
+
+.card>.body:hover {
+	overflow: auto;
+}
+
+.hide {
+	display: none;
+}
+
+.info-text {
+	text-align: center;
+}
+
+* {
+	scrollbar-width: thin;
+}
+

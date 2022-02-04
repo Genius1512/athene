@@ -1,47 +1,50 @@
+
+
 .search-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: .25rem;
-  }
-  
-  input {
-    font-size: 3rem;
-    height: 50px;
-    width: calc(100% / 2)
-  }
-  
-  .user-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-    gap: .25rem;
-    margin-top: 1rem;
-  }
-  
-  .card {
-    padding: .5rem;
-  }
-  
-  .card > .header {
-    margin-bottom: .25rem;
-  }
-  
-  .card > .body {
-    font-size: .8rem;
-    overflow: hidden;
-  }
+	display: flex;
+	flex-direction: column;
+	gap: .25rem;
+}
 
-  .card > .body:hover {
-    overflow: auto;
-  }
-  
-  .hide {
-    display: none;
-  }
+input {
+	font-size: 3rem;
+	height: 50px;
+	width: calc(100% / 2)
+}
 
-  .info-text {
-    text-align: center;
-  }
+.user-cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+	gap: .25rem;
+	margin-top: 1rem;
+}
+
+.card {
+	padding: .5rem;
+}
+
+.card>.header {
+	margin-bottom: .25rem;
+}
+
+.card>.body {
+	font-size: .8rem;
+	overflow: hidden;
+}
+
+.card>.body:hover {
+	overflow: auto;
+}
+
+.hide {
+	display: none;
+}
+
+.info-text {
+	text-align: center;
+}
 
 * {
-  scrollbar-width: thin;
+	scrollbar-width: thin;
 }
+
