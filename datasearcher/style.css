@@ -15,13 +15,12 @@
   
   .user-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
     gap: .25rem;
     margin-top: 1rem;
   }
   
   .card {
-    box-sizing: border-box;
     border: 1px solid black;
     background-color: white;
     padding: .5rem;
