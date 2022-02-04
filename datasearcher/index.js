@@ -1,11 +1,12 @@
-const userCardTemplate = document.querySelector("[data-user-template]")
-const userCardContainer = document.querySelector("[data-user-cards-container]")
-const searchInput = document.querySelector("[data-search]")
+const userCardTemplate = document.querySelector("[data-user-template]");
+const userCardContainer = document.querySelector("[data-user-cards-container]");
+const searchInput = document.querySelector("[data-search]");
 
-let profiles = []
+let profiles = [];
 
 searchInput.addEventListener("input", e => {
-    const value = e.target.value.toLowerCase()
+    const value = e.target.value.toLowerCase();
+    var notShowing = 0;
     profiles.forEach(profile => {
         const isVisible =
             profile.name.toLowerCase().includes(value) ||
@@ -14,7 +15,16 @@ searchInput.addEventListener("input", e => {
             profile.hash.toLowerCase().includes(value) ||
             profile.rawName.toLowerCase().includes(value)
         profile.element.classList.toggle("hide", !isVisible)
+        if (!isVisible) {
+            notShowing += 1;
+        }
     })
+
+    if (profiles.length == notShowing) {
+        document.getElementById("info-text").innerHTML = "No profiles found";
+    } else {
+        document.getElementById("info-text").innerHTML = "";
+    }
 })
 
 fetch("https://genius1512.github.io/athene/files/data.json")

@@ -9,7 +9,9 @@
   }
   
   input {
-    font-size: 1rem;
+    font-size: 3rem;
+    height: 50px;
+    width: calc(100% / 2)
   }
   
   .user-cards {
@@ -34,4 +36,8 @@
   
   .hide {
     display: none;
+  }
+
+  .info-text {
+    text-align: center;
   }

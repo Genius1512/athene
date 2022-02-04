@@ -1,8 +1,48 @@
+body {
+    background-color: rgb(54, 54, 54);
+}
+
 .card {
     border: 1px solid black;
-    background-color: white;
+    border-radius: 5px;
+    background-color: #28292E;
+    color: #3794ff;
+    text-align: center;
 }
 
 .body {
-    color: #777;
+    color: #72b0f7;
+}
+
+label {
+    color: #1c82f7;
+    font-size: 2rem;
+}
+
+::-webkit-input-placeholder {
+    text-align: center;
+ }
+ 
+ :-moz-placeholder {
+    text-align: center;  
+ }
+ 
+ ::-moz-placeholder {
+    text-align: center;  
+ }
+
+input {
+    background-color: #28292E;
+    color: #3794ff;
+}
+
+.search-wrapper {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+  }
+
+.info-text {
+    color: #72b0f7;
 }
