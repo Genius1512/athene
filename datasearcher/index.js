@@ -11,7 +11,8 @@ searchInput.addEventListener("input", e => {
             profile.name.toLowerCase().includes(value) ||
             profile.id.toLowerCase().includes(value) ||
             profile.class.toLowerCase().includes(value) ||
-            profile.hash.toLowerCase().includes(value)
+            profile.hash.toLowerCase().includes(value) ||
+            profile.identifier.toLowerCase().includes(value)
         profile.element.classList.toggle("hide", !isVisible)
     })
 })
