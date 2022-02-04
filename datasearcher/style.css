@@ -48,3 +48,17 @@ input {
 	scrollbar-width: thin;
 }
 
+#show-timetable {
+  height: 30px;
+  width: 200px;
+  font-size: 1.2rem;
+  background-color: rgb(54, 54, 54);
+  color: #1c82f7;
+  border-color: transparent;
+  border-radius: 10px;
+}
+
+#show-timetable:hover {
+  background-color: #28292E;
+  border-color: black;
+}
