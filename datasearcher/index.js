@@ -42,7 +42,7 @@ fetch("https://genius1512.github.io/athene/files/data.json")
             const card = userCardTemplate.content.cloneNode(true).children[0]
             const header = card.querySelector("[data-header]")
             const body = card.querySelector("[data-body]")
-            header.textContent = profile.profile
+            header.textContent = profile
             body.textContent = `Name: ${profile.name}
 ID: ${profile.id}
 Class: ${profile.class}
