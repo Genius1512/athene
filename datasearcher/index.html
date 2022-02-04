@@ -4,15 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Searcher</title>
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
 </head>
 <body>
     <div class="search-wrapper">
-        <label for="search">Search Profiles</label>
-        <input type="searcher" id="searcher">
+        <label for="search-input">Search Profiles</label>
+        <input type="search" id="search-input">
     </div>
-    <div class="profile-cards">
-        
+    <div class="profile-cards" id="profiles-container">
+        <template id="profile-template">
+            <div class="card">
+                <div class="header"></div>
+                <div class="body"></div>
+            </div>
+        </template>
     </div>
 </body>
 </html>
