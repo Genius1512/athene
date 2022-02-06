@@ -69,7 +69,9 @@ Hash: ${profile.hash}`
                 loginButton.id = "login-button";
                 loginButton.className = "button";
                 loginButton.innerHTML = "Login";
+                loginButton.style.marginTop = ".25rem";
                 loginButton.onclick = function() { login(profile) }
+                card.appendChild(document.createElement("br"))
                 card.appendChild(loginButton);
             }
 
