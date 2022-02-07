@@ -6,7 +6,6 @@ import timetable as tt
 import getmenu
 import data
 import uvicorn
-import hashgrabber
 
 
 # dict for help texts
@@ -19,6 +18,8 @@ help = {
 """,
     "menu": """Get todays menu in the canteen: athene menu
 """,
+    "hashgrabber": """Start api server to catch data by hash_one_liner.txt
+"""
 }
 
 
