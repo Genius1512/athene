@@ -3,7 +3,7 @@ import requests as req
 import sys
 sys.path.append("../athene")
 from athene.console import console
-from datetime import datetime
+from rich.status import Status
 
 # TODO: Get day (as word: "Montag")
 
@@ -12,7 +12,13 @@ def get_menu(day_ind):
     if day_ind == "today":
         day_ind = 1
     # fetch site
+    spinner = Status(
+        status="Fetching menu...",
+        spinner="aesthetic"
+    )
+    spinner.start()
     data = req.get("https://kanti-limmattal.sv-restaurant.ch/de/menuplan/").text
+    spinner.stop()
 
     # cleanup
     soup = BeautifulSoup(data, features="lxml")
@@ -20,7 +26,7 @@ def get_menu(day_ind):
     menus = todays_menu.findAll("div", {"class": "menu-item"})
 
     # get all menus
-    console.print(f"[blue]Menu am nächsten {day_ind}\n")
+    console.print(f"Menu am nächsten {day_ind}\n", style="blue")
     for menu in menus:
         title = menu.find(
             "h2", {"class": "menu-title"}

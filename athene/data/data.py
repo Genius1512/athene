@@ -21,6 +21,7 @@ def get(identifier: str):
 
 def search(term: str):
     # search through teachers
+    had_output = False
     for key in data["teachers"]:
         if (
             term in key
@@ -28,6 +29,7 @@ def search(term: str):
             or term in data["teachers"][key]["name"]
             or term in data["teachers"][key]["hash"]
         ):
+            had_output = True
             console.print(key, style="standard")
     # search through students
     for key in data["students"]:
@@ -38,4 +40,8 @@ def search(term: str):
             or term in data["students"][key]["hash"]
             or term in data["students"][key]["class"]
         ):
+            had_output = True
             console.print(key, style="standard")
+
+    if not had_output:
+        console.print("No profiles matched your search", style="warning")

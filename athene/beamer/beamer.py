@@ -3,10 +3,7 @@ import sys
 sys.path.append("../athene")
 from athene.console import console
 import requests
-
-
-def print(arg):
-    console.print("[Beamer]: " + str(arg))
+from rich.status import Status
 
 
 # parse identifiers to keys
@@ -34,7 +31,7 @@ def remote(args):
     ip = args[0]
     key = parse_key(args[1])
     if key == None:
-        print("Invalid key")
+        console.print("Invalid key", style="error")
         return
     url = f"http://{ip}:80/cgi-bin/webconf.dll?KEY={key}"
     headers = {
@@ -48,12 +45,19 @@ def remote(args):
     }
 
     try:
+        spinner = Status(
+            status="Sending request...",
+            spinner="aesthetic"
+        )
+        spinner.start()
         resp = requests.get(url, headers)
     except requests.exceptions.ConnectionError:
-        print("Connection failed")
+        console.print("\nConnection failed", style="error")
+        spinner.stop()
         return
-    print("Successfull")
-    print(resp.text)
+    spinner.stop()
+    console.print("\nSuccessfull", style="success")
+    console.print(resp.text, style="standard")
 
 
 if __name__ == "__main__":

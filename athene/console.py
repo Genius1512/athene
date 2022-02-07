@@ -5,12 +5,21 @@ from rich.style import Style
 
 
 theme = Theme({
-    "error": Style(
-        color="red",
-        bold=True
-    ),
     "standard": Style(
         color="white"
+    ),
+    "success": Style(
+        color="green",
+        bold=True,
+        underline=True
+    ),
+    "warning": Style(
+        color="yellow"
+    ),
+    "error": Style(
+        color="red",
+        bold=True,
+        underline=True
     )
 })
 

@@ -3,11 +3,18 @@ from bs4 import BeautifulSoup
 import sys
 sys.path.append("../athene")
 from athene.console import console
+from rich.status import Status
 
 
 def get_timetable(cl):
     # get data
+    spinner = Status(
+        status="Fetching timetable...",
+        spinner="aesthetic"
+    )
+    spinner.start()
     resp = req.get(f"https://kslzh.ch/index.php?pid=116&t={cl}")
+    spinner.stop()
 
     soup = BeautifulSoup(resp.text, features="lxml")
 
