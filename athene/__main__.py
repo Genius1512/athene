@@ -35,7 +35,7 @@ def get_help(operation: str = "all"):
 
 
 # Entry Point
-def main(args):
+def run(args):
     try:
         if args[1] == "beamer":
             beamer.remote(["192.168.20.141", "close"])
@@ -93,6 +93,18 @@ def main(args):
         print(
             "[red][Main]: Not enough arguments[/red]"
         )  # any command has not enough arguments to perform its operation
+
+
+def main(args):
+    if len(args) == 1:
+        while True:
+            command = input("> ")
+            if command == "exit":
+                break
+            command = ["foo"] + command.split(" ")
+            run(command)
+    else:
+        run(args)
 
 
 if __name__ == "__main__":
