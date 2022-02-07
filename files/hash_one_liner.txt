@@ -1,0 +1,1 @@
+document.getElementById("windowLink").click();document.getElementById("cal-show-ics-link-calendarLink-timetable").click();var link = document.getElementById("cal-show-ics-textfield-calendarLink-timetable").value; window.location.href = "http://127.0.0.1:8000/" + link.slice( link.indexOf("auth/") + 5, link.indexOf("/calendar"))

@@ -6,6 +6,7 @@ import timetable as tt
 import getmenu
 import data
 import uvicorn
+import hashgrabber
 
 
 # dict for help texts
@@ -66,6 +67,18 @@ def main(args):
 
             else:
                 print(f"[red]Invalid operation '{args[2]}'[/red]")
+
+        elif args[1] == "hashgrabber":
+            try:
+                host = args[3]
+            except IndexError:
+                host = "127.0.0.1"
+            try:
+                port = int(args[4])
+            except IndexError:
+                port = 8000
+
+            uvicorn.run("hashgrabber.hash_grabber:app", host=host, port=port)
 
         elif args[1] == "help":
             try:
