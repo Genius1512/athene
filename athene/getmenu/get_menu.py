@@ -1,6 +1,8 @@
 from bs4 import BeautifulSoup
 import requests as req
-from rich import print
+import sys
+sys.path.append("../athene")
+from athene.console import console
 from datetime import datetime
 
 # TODO: Get day (as word: "Montag")
@@ -18,7 +20,7 @@ def get_menu(day_ind):
     menus = todays_menu.findAll("div", {"class": "menu-item"})
 
     # get all menus
-    print(f"[blue]Menu am nächsten {day_ind}\n")
+    console.print(f"[blue]Menu am nächsten {day_ind}\n")
     for menu in menus:
         title = menu.find(
             "h2", {"class": "menu-title"}
@@ -45,7 +47,7 @@ def get_menu(day_ind):
         elif is_vegan:
             food_type = "(Vegan)"
 
-        print(
+        console.print(
             f"""[blue]{title} {food_type}[/blue]
 
 [white]{description}[/white]

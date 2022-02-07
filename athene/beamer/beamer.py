@@ -1,10 +1,12 @@
 from sys import argv
-from rich import print as rprint
+import sys
+sys.path.append("../athene")
+from athene.console import console
 import requests
 
 
 def print(arg):
-    rprint("[Beamer]: " + str(arg))
+    console.print("[Beamer]: " + str(arg))
 
 
 # parse identifiers to keys

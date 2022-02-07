@@ -1,6 +1,8 @@
 import requests as req
 from bs4 import BeautifulSoup
-from rich import print
+import sys
+sys.path.append("../athene")
+from athene.console import console
 
 
 def get_timetable(cl):
@@ -51,7 +53,7 @@ def get_timetable(cl):
 
     for s in range(len(string)):
         try:
-            print(f"{times[s]}  {string[s]}")
+            console.print(f"{times[s]}  {string[s]}")
         except IndexError:
             pass
 

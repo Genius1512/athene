@@ -107,5 +107,5 @@ function showTimetable(profile) {
         filter = "student";
     }
 
-    window.open(`https://intranet.tam.ch/ksl/print/pdf-timetable?filter=${filter}&id=${id}&start=${date}&table=week&daysviewed=week&reservations=0`, "_blank", "fullscreen=yes")
+    window.open(`https://intranet.tam.ch/ksl/console.print/pdf-timetable?filter=${filter}&id=${id}&start=${date}&table=week&daysviewed=week&reservations=0`, "_blank", "fullscreen=yes")
 }

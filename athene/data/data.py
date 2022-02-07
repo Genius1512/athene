@@ -1,7 +1,10 @@
 import json
 import os
-from rich import print
 import requests as req
+
+import sys
+sys.path.append("../athene")
+from athene.console import console
 
 data = json.loads(req.get("https://genius1512.github.io/athene/files/data.json").text)
 # when getting profile
@@ -11,9 +14,9 @@ def get(identifier: str):
     )  # teacher or student?
 
     if identifier in new_data:
-        print(f"{identifier}'s profile:")
+        console.print(f"{identifier}'s profile:", style="standard")
         for attribute in new_data[identifier]:
-            print(f"    {attribute}: {new_data[identifier][attribute]}")
+            console.print(f"    {attribute}: {new_data[identifier][attribute]}", style="standard")
 
 
 def search(term: str):
@@ -25,7 +28,7 @@ def search(term: str):
             or term in data["teachers"][key]["name"]
             or term in data["teachers"][key]["hash"]
         ):
-            print(key)
+            console.print(key, style="standard")
     # search through students
     for key in data["students"]:
         if (
@@ -35,4 +38,4 @@ def search(term: str):
             or term in data["students"][key]["hash"]
             or term in data["students"][key]["class"]
         ):
-            print(key)
+            console.print(key, style="standard")

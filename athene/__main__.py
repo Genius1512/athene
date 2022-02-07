@@ -1,6 +1,8 @@
 # imports
 from sys import argv
-from rich import print
+import sys
+sys.path.append("../athene")
+from athene.console import console
 import beamer
 import timetable as tt
 import getmenu
@@ -28,12 +30,12 @@ help = {
 def get_help(operation: str = "all"):
     if operation == "all":
         for i in help:
-            print(f"{i}: {help[i]}")
+            console.print(f"{i}: {help[i]}")
     else:
         try:
-            print(f"{operation}: {help[operation]}")
+            console.print(f"{operation}: {help[operation]}")
         except KeyError:
-            print("[red]Invalid operation[/red]")
+            console.print("Invalid operation", style="error")
 
 
 # Entry Point
@@ -68,7 +70,7 @@ def run(args):
                 uvicorn.run("data.api:app", host=host, port=port)
 
             else:
-                print(f"[red]Invalid operation '{args[2]}'[/red]")
+                console.print(f"Invalid operation '{args[2]}'", style="error")
 
         elif args[1] == "hashgrabber":
             try:
@@ -89,11 +91,11 @@ def run(args):
                 get_help()
 
         else:
-            print(f"[red]Invalid operation '{args[1]}'[/red]")
+            console.print(f"Invalid operation '{args[1]}'[/red]", style="error")
 
     except IndexError:
-        print(
-            "[red][Main]: Not enough arguments[/red]"
+        console.print(
+            "Not enough arguments", style="error"
         )  # any command has not enough arguments to perform its operation
 
 
