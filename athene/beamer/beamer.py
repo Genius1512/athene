@@ -1,5 +1,6 @@
 from sys import argv
 import sys
+
 sys.path.append("../athene")
 from athene.console import console
 import requests

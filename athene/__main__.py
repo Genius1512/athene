@@ -1,6 +1,7 @@
 # imports
 from sys import argv
 import sys
+
 sys.path.append("../athene")
 from athene.console import console
 import beamer
@@ -22,7 +23,7 @@ help = {
     "menu": """Get todays menu in the canteen: athene menu
 """,
     "hashgrabber": """Start api server to catch data by hash_one_liner.txt
-"""
+""",
 }
 
 

@@ -3,6 +3,7 @@ import os
 import requests as req
 
 import sys
+
 sys.path.append("../athene")
 from athene.console import console
 
@@ -16,7 +17,9 @@ def get(identifier: str):
     if identifier in new_data:
         console.print(f"{identifier}'s profile:", style="standard")
         for attribute in new_data[identifier]:
-            console.print(f"    {attribute}: {new_data[identifier][attribute]}", style="standard")
+            console.print(
+                f"    {attribute}: {new_data[identifier][attribute]}", style="standard"
+            )
 
 
 def search(term: str):
