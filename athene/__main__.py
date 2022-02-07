@@ -91,7 +91,7 @@ def run(args):
                 get_help()
 
         else:
-            console.print(f"Invalid operation '{args[1]}'[/red]", style="error")
+            console.print(f"Invalid operation '{args[1]}'", style="error")
 
     except IndexError:
         console.print(
@@ -107,6 +107,7 @@ def main(args):
                 break
             elif command == "clear":
                 system("cls")
+                continue
             command = ["foo"] + command.split(" ")
             run(command)
     else:
