@@ -21,18 +21,18 @@ def search(term: str):
     for key in data["teachers"]:
         if (
             term in key
-            or term in data["teachers"]["id"]
-            or term in data["teachers"]["name"]
-            or term in data["teachers"]["hash"]
+            or term in data["teachers"][key]["id"]
+            or term in data["teachers"][key]["name"]
+            or term in data["teachers"][key]["hash"]
         ):
             print(key)
     # search through students
-    for key, data["students"] in data["students"]:
+    for key in data["students"]:
         if (
             term in key
-            or term in data["students"]["id"]
-            or term in data["students"]["name"]
-            or term in data["students"]["hash"]
-            or term in data["students"]["class"]
+            or term in data["students"][key]["id"]
+            or term in data["students"][key]["name"]
+            or term in data["students"][key]["hash"]
+            or term in data["students"][key]["class"]
         ):
             print(key)

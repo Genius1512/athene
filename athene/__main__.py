@@ -6,6 +6,7 @@ import timetable as tt
 import getmenu
 import data
 import uvicorn
+from os import system
 
 
 # dict for help texts
@@ -102,6 +103,8 @@ def main(args):
             command = input("> ")
             if command == "exit":
                 break
+            elif command == "clear":
+                system("cls")
             command = ["foo"] + command.split(" ")
             run(command)
     else:
