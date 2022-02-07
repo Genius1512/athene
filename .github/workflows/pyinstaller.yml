@@ -23,14 +23,22 @@ jobs:
           python -m pip install --upgrade pip
           pip install pyinstaller
       # Runs a set of commands using the runners shell
-      - name: Run black
+      - name: Run pyinstaller
         run: |
           pyinstaller --noconfirm --onefile --console --icon "favicon.ico" --name "Athene"  "athene/__main__.py"
+      
+      - name: Cleanup
+        run: |
+          rm bin/Athene.exe
+          mv dist/Athene.exe bin/
+          rm -r dist
+          rm -r build
+          rm Athene.spec
           
       - name: Commit changes
         run: |
           git config --global user.email "silvan.genius@gmail.com"
           git config --global user.name "Genius1512"
           git add --all
-          git commit -m "Black Formatted"
+          git commit -m "Runned pyinstaller"
           git push --all
