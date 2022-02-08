@@ -89,7 +89,6 @@ Hash: ${profile.hash}`
 
 function showTimetable(profile) {
     profile = profile.parentElement.children[0].innerHTML;
-    console.log(profile);
 
     var id;
     var filter = profile;
@@ -107,5 +106,6 @@ function showTimetable(profile) {
         filter = "student";
     }
 
+    console.log(`https://intranet.tam.ch/ksl/console.print/pdf-timetable?filter=${filter}&id=${id}&start=${date}&table=week&daysviewed=week&reservations=0`);
     window.open(`https://intranet.tam.ch/ksl/console.print/pdf-timetable?filter=${filter}&id=${id}&start=${date}&table=week&daysviewed=week&reservations=0`, "_blank", "fullscreen=yes")
 }
