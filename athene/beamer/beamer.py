@@ -48,7 +48,7 @@ def remote(args):
     try:
         spinner = Status(
             status="Sending request...",
-            spinner="aesthetic"
+            spinner="dots"
         )
         spinner.start()
         resp = requests.get(url, headers)

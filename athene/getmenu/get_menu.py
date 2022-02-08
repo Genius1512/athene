@@ -15,7 +15,7 @@ def get_menu(day_ind):
     # fetch site
     spinner = Status(
         status="Fetching menu...",
-        spinner="aesthetic"
+        spinner="dots"
     )
     spinner.start()
     data = req.get("https://kanti-limmattal.sv-restaurant.ch/de/menuplan/").text

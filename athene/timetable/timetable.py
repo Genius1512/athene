@@ -12,7 +12,7 @@ def get_timetable(cl):
     # get data
     spinner = Status(
         status="Fetching timetable...",
-        spinner="aesthetic"
+        spinner="dots"
     )
     spinner.start()
     resp = req.get(f"https://kslzh.ch/index.php?pid=116&t={cl}")

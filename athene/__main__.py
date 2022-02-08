@@ -103,8 +103,8 @@ def run(args):
                 return
             
             spinner = Status(
-            status="Fetching markdown",
-            spinner="aesthetic"
+            status="Fetching markdown...",
+            spinner="dots"
             )
             spinner.start()
             resp = req.get(link).text
