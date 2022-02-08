@@ -1,9 +1,9 @@
-from sys import argv
 import sys
+from sys import argv
 
 sys.path.append("../athene")
-from athene.console import console
 import requests
+from athene.console import console
 from rich.status import Status
 
 

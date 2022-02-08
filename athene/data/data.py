@@ -1,8 +1,8 @@
 import json
 import os
-import requests as req
-
 import sys
+
+import requests as req
 
 sys.path.append("../athene")
 from athene.console import console

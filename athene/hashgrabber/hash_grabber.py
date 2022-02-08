@@ -1,5 +1,7 @@
-from fastapi import FastAPI
 import sys
+
+from fastapi import FastAPI
+
 sys.path.append("../athene")
 from athene.console import console
 

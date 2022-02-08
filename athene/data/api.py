@@ -1,6 +1,7 @@
-from fastapi import FastAPI
 import json
+
 import requests as req
+from fastapi import FastAPI
 
 # create api
 app = FastAPI()

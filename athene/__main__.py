@@ -1,16 +1,17 @@
 # imports
-from sys import argv
 import sys
+from sys import argv
 
 sys.path.append("../athene")
-from athene.console import console
-import beamer
-import timetable as tt
-import getmenu
-import data
-import uvicorn
 from os import system
 
+import uvicorn
+
+import beamer
+import data
+import getmenu
+import timetable as tt
+from athene.console import console
 
 # dict for help texts
 help = {

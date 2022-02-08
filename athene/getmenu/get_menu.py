@@ -1,12 +1,12 @@
-from bs4 import BeautifulSoup
-import requests as req
 import sys
+
+import requests as req
+from bs4 import BeautifulSoup
 
 sys.path.append("../athene")
 from athene.console import console
 from rich.status import Status
 
-# TODO: Get day (as word: "Montag")
 
 # get menu function
 def get_menu(day_ind):
