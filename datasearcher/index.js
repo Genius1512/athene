@@ -27,10 +27,13 @@ searchInput.addEventListener("input", e => {
         }
     })
 
-    if (profiles.length == notShowing) {
-        document.getElementById("info-text").innerHTML = "No profiles found";
+    console.log(`${notShowing}/${profiles.length}`);
+    if (notShowing == profiles.length) {
+        console.log("Showing")
+        document.getElementById("info-text").style.display = "block";
     } else {
-        document.getElementById("info-text").innerHTML = "";
+        console.log("Hiding")
+        document.getElementById("info-text").style.display = "none";
     }
 })
 
