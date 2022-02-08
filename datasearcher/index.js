@@ -86,26 +86,3 @@ Hash: ${profile.hash}`
             }
         })
     })
-
-function showTimetable(profile) {
-    profile = profile.parentElement.children[0].innerHTML;
-
-    var id;
-    var filter = profile;
-    var date = new Date().toISOString().split('T')[0]
-
-    profiles.forEach(user => {
-        if (user.rawName == profile) {
-            id = user.id;
-        }
-    })
-
-    if (profile.length >= 3 && profile.length <= 4) {
-        filter = "teacher";
-    } else {
-        filter = "student";
-    }
-
-    console.log(`https://intranet.tam.ch/ksl/console.print/pdf-timetable?filter=${filter}&id=${id}&start=${date}&table=week&daysviewed=week&reservations=0`);
-    window.open(`https://intranet.tam.ch/ksl/console.print/pdf-timetable?filter=${filter}&id=${id}&start=${date}&table=week&daysviewed=week&reservations=0`, "_blank", "fullscreen=yes")
-}
