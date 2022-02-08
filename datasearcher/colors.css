@@ -34,8 +34,8 @@ label {
 }
 
 input {
-	background-color: #28292E;
-	color: #3794ff;
+	background-color: transparent;
+	color: #ffffff;
 }
 
 .search-wrapper {
@@ -47,12 +47,6 @@ input {
 
 .info-text {
 	color: #72b0f7;
-}
-
-input {
-	font-size: 3rem;
-	height: 50px;
-	width: calc(100% / 2)
 }
 
 .user-cards {

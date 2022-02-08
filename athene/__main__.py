@@ -18,6 +18,7 @@ help = {
     "data": """Get a user's profile information: athene data get <identifier>
       Search for a given term: athene data search <term>
       Launch API on <ip> <port>: athene data api <ip> <port>; defaults: 127.0.0.1 and 8000
+      Download raw JSON data: athene data download
 """,
     "timetable": """Alternative: tt; Get timetable of given class: athene timetable <class>
 """,
