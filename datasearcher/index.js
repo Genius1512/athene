@@ -89,7 +89,6 @@ Hash: ${profile.hash}`
 
 function showTimetable(profile) {
     profile = profile.parentElement.children[0].innerHTML;
-    console.log(profile);
 
     var id;
     var filter = profile;
