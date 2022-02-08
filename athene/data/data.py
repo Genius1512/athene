@@ -1,11 +1,13 @@
 import json
-import os
+import wget
 import sys
 
 import requests as req
+from promptlib import Files
 
 sys.path.append("../athene")
 from athene.console import console
+from rich.prompt import Confirm
 
 data = json.loads(req.get("https://genius1512.github.io/athene/files/data.json").text)
 # when getting profile
@@ -48,3 +50,9 @@ def search(term: str):
 
     if not had_output:
         console.print("No profiles matched your search", style="warning")
+
+
+def download():
+    download_y_n = Confirm.ask("Do you want to download the JSON data?")
+    if download_y_n:
+        wget.download("https://genius1512.github.io/athene/files/data.json", out=Files().dir())

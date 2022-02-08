@@ -71,6 +71,9 @@ def run(args):
 
                 uvicorn.run("data.api:app", host=host, port=port)
 
+            elif args[2] == "download":
+                data.download()
+
             else:
                 console.print(f"Invalid operation '{args[2]}'", style="error")
 

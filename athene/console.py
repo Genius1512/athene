@@ -19,6 +19,11 @@ theme = Theme({
         color="red",
         bold=True,
         underline=True
+    ),
+    "debug": Style(
+        color="purple",
+        bold=True,
+        underline=True
     )
 })
 
