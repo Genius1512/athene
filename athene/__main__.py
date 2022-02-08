@@ -6,12 +6,15 @@ sys.path.append("../athene")
 from os import system
 
 import uvicorn
+import requests as req
 
 import beamer
 import data
 import getmenu
 import timetable as tt
 from athene.console import console
+from rich.markdown import Markdown
+from rich.status import Status
 
 # dict for help texts
 help = {
@@ -89,6 +92,25 @@ def run(args):
                 port = 8000
 
             uvicorn.run("hashgrabber.hash_grabber:app", host=host, port=port)
+
+        elif args[1] == "md":
+            if args[2] == "contributing":
+                link = "https://genius1512.github.io/athene/CONTRIBUTING.md"
+            elif args[2] == "readme":
+                link = "https://genius1512.github.io/athene/README.md"
+            else:
+                console.print("Invalid Markdown identifier", style="error")
+                return
+            
+            spinner = Status(
+            status="Fetching markdown",
+            spinner="aesthetic"
+            )
+            spinner.start()
+            resp = req.get(link).text
+            spinner.stop()
+
+            console.print(Markdown(resp))
 
         elif args[1] == "help":
             try:
