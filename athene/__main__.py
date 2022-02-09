@@ -1,20 +1,28 @@
-# imports
-import sys
-from sys import argv
+try:
+    # imports
+    import sys
+    from sys import argv
 
-sys.path.append("../athene")
-from os import system
+    sys.path.append("../athene")
 
-import uvicorn
-import requests as req
+    import uvicorn
+    import requests as req
 
-import beamer
-import data
-import getmenu
-import timetable as tt
-from athene.console import console
-from rich.markdown import Markdown
-from rich.status import Status
+    import beamer
+    import data
+    import getmenu
+    import timetable as tt
+    from athene.console import console
+    from rich.markdown import Markdown
+    from rich.status import Status
+except Exception:
+    sys.path.append("../athene")
+    from athene.console import console
+
+    console.print("An error occured. If the error occured multiple times, please contact Silvan Schmidt", style="error")
+    console.print_exception(show_locals=True)
+    console.input("[red bold underline]Enter to quit")
+    sys.exit(1)
 
 # dict for help texts
 help = {
@@ -122,6 +130,10 @@ def run(args):
         console.print(
             "Not enough arguments", style="error"
         )  # any command has not enough arguments to perform its operation
+    except Exception:
+        console.print("An error occured. If the error occured multiple times, please contact Silvan Schmidt", style="error")
+        console.print_exception(show_locals=True)
+        sys.exit(1)
 
 
 def main(args):
