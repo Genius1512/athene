@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="/athene/static/styles/md.css">
 <link rel="shortcut icon" type="image/x-icon" href="/athene/favicon.ico">
 
-# Athene Comamnd line tool
+# Athene Comand line tool
 
 - [Binary file](../bin/Athene.exe)
 - [Python source code]("https://github.com/Genius1512/athene/tree/master/athene")
