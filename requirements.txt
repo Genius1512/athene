@@ -1,7 +1,0 @@
-requests
-rich
-bs4
-lxml
-fastapi
-uvicorn
-promptlib
